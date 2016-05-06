@@ -53,7 +53,7 @@ autocmd BufWritePre * :%s/\s\+$//e  "Remove trailing whitespaces
 
 let mapleader=';' " Easy access to leader key
 
-let g:EasyMotion_leader_key = '<Leader><Leader>'
+let g:EasyMotion_leader_key='<Leader><Leader>'
 
 map <Leader>t :CommandT<CR>
 map <Leader>n :NERDTreeToggle<CR>
@@ -69,7 +69,7 @@ map <Leader>b :TagbarToggle<CR>
 "=============================================================================
 
 " NERDTree
- let NERDTreeIgnore = ['\.pyc$', '\.gem$', '\.out', '\~$', '_site', '\.beam$']
+ let NERDTreeIgnore=['\.pyc$', '\.gem$', '\.out', '\~$', '_site', '\.beam$']
 
 " UltiSnips Configuration
 let g:UltiSnipsExpandTrigger="<c-j>"
@@ -77,17 +77,17 @@ let g:UltiSnipsExpandTrigger="<c-j>"
 " YCM Options
 let g:ycm_autoclose_preview_window_after_completion=1
 nnoremap <leader>g :YcmCompleter GoToDefinitionElseDeclaration<CR>
-let g:ycm_global_ycm_extra_conf = '~/projects/dotfiles/ycm_extra_conf.py'
-let g:ycm_key_list_select_completion = ['<TAB>', '<Down>']
-let g:ycm_key_list_previous_completion = ['<S-TAB>', '<Up>']
-let g:clang_complete_auto = 1
-let g:clang_use_library = 1
-let g:clang_debug = 1
-let g:clang_library_path = '/usr/lib/'
+let g:ycm_global_ycm_extra_conf='~/projects/dotfiles/ycm_extra_conf.py'
+let g:ycm_key_list_select_completion=['<TAB>', '<Down>']
+let g:ycm_key_list_previous_completion=['<S-TAB>', '<Up>']
+let g:clang_complete_auto=1
+let g:clang_use_library=1
+let g:clang_debug=1
+let g:clang_library_path='/usr/lib/'
 let g:clang_user_options='|| exit 0'
 
 " Set airline theme
 let g:airline_theme='base16_solarized'
 
 " vim-puppet configuration
-let g:puppet_80chars = 'false'
+let g:puppet_80chars='false'
