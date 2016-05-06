@@ -6,20 +6,20 @@ scriptencoding utf-8
 syntax on " syntax highlighting for files
 
 if !has('nvim')
-    set autoindent "Use spaces not tabs by default
-    set autoread
-    set backspace=2
-    set encoding=utf-8
-    set history=1000
-    set hlsearch   " Highlight search results
-    set incsearch  " Start showing results as you type
-    set laststatus=2
-    set listchars=tab:>.,trail:.,extends:#,nbsp:. "Show traiing whitepace etc
+    set autoindent                                " Use spaces not tabs by default
+    set autoread                                  " Reload file after begin written to outside of vim
+    set backspace=2                               " http://vim.wikia.com/wiki/Backspace_and_delete_problems
+    set encoding=utf-8                            " Display specal and foreign charecters
+    set history=1000                              " Remember commands entered
+    set hlsearch                                  " Highlight search results
+    set incsearch                                 " Start showing results as you type
+    set laststatus=2                              " Show the status bar for all windows
+    set listchars=tab:>.,trail:.,extends:#,nbsp:. " Show traiing whitepace etc
 endif
 
 " Tab settings
-set expandtab " Insert the right number of spaces
-set tabstop=4 " Display n spaces for each tab
+set expandtab     " Insert the right number of spaces
+set tabstop=4     " Display n spaces for each tab
 set softtabstop=4 " Display n spaces for each softtab
 
 " Search  settings
@@ -34,27 +34,24 @@ set wildmode=list:longest     " Wildcard matches, order by longest first
 "=============================================================================
 
 colorscheme solarized
-
-set t_Co=256 " I think this is needed for solarize
-set background=dark
-
-set visualbell
-set scrolloff=999 "
-set ruler
-set relativenumber
-set cursorline
+set t_Co=256        " I think this is needed for solarize
+set background=dark " Dark solarize theme
+set visualbell      " Flash screen on notifications
+set scrolloff=999   " Centered cursor
+set ruler           " Show the line numbers
+set relativenumber  " Line numbers relative to the cursor
+set cursorline      " Highlight line the cursor is on
 
 "=============================================================================
 " Auto Commands
 "=============================================================================
-"
 autocmd BufWritePre * :%s/\s\+$//e  "Remove trailing whitespaces
 
 "=============================================================================
 " Key Bindings
 "=============================================================================
 
-let mapleader=';'
+let mapleader=';' " Easy access to leader key
 
 let g:EasyMotion_leader_key = '<Leader><Leader>'
 
