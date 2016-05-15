@@ -7,9 +7,9 @@ syntax on " syntax highlighting for files
 
 if !has('nvim')
     set autoindent                                " Use spaces not tabs by default
+    set encoding=utf-8                            " Display specal and foreign charecters
     set autoread                                  " Reload file after begin written to outside of vim
     set backspace=2                               " http://vim.wikia.com/wiki/Backspace_and_delete_problems
-    set encoding=utf-8                            " Display specal and foreign charecters
     set history=1000                              " Remember commands entered
     set hlsearch                                  " Highlight search results
     set incsearch                                 " Start showing results as you type
@@ -27,18 +27,6 @@ set ignorecase " Ignore casing of searches
 set smartcase  " Be smart about case sensitivity when searching
 
 set wildmode=list:longest     " Wildcard matches, order by longest first
-
-
-"=============================================================================
-" Display & theme settings
-"=============================================================================
-
-set background=dark
-set visualbell      " Flash screen on notifications
-set scrolloff=999   " Centered cursor
-set ruler           " Show the line numbers
-set relativenumber  " Line numbers relative to the cursor
-set cursorline      " Highlight line the cursor is on
 
 "=============================================================================
 " Auto Commands
@@ -75,5 +63,21 @@ let g:UltiSnipsExpandTrigger="<c-j>"
 " Shougo/deoplete.nvim
 let g:deoplete#enable_at_startup = 1 " Start
 
-" vim-puppet configuration
-let g:puppet_80chars='false'
+" base16 themes
+let base16colorspace=256
+
+" airline
+let g:airline_powerline_fonts = 0
+
+"=============================================================================
+" Display & theme settings
+"=============================================================================
+
+set t_Co=256               " Use 256 colors
+set background=dark        " Set dark backgrounds by default
+set visualbell             " Flash screen on notifications
+set scrolloff=999          " Centered cursor
+set ruler                  " Show the line numbers
+set relativenumber         " Line numbers relative to the cursor
+set cursorline             " Highlight line the cursor is on
+colorscheme base16-monokai
