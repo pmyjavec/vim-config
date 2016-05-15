@@ -21,6 +21,7 @@ endif
 set expandtab     " Insert the right number of spaces
 set tabstop=4     " Display n spaces for each tab
 set softtabstop=4 " Display n spaces for each softtab
+set shiftwidth=4  " Amount of spaces when re-indenting
 
 " Search  settings
 set ignorecase " Ignore casing of searches
@@ -67,7 +68,7 @@ let g:deoplete#enable_at_startup = 1 " Start
 let base16colorspace=256
 
 " airline
-let g:airline_powerline_fonts = 0
+let g:airline_powerline_fonts = 1
 
 "=============================================================================
 " Display & theme settings
