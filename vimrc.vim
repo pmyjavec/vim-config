@@ -33,7 +33,7 @@ set wildmode=list:longest     " Wildcard matches, order by longest first
 " Display & theme settings
 "=============================================================================
 
-colorscheme monokai
+set background=dark
 set visualbell      " Flash screen on notifications
 set scrolloff=999   " Centered cursor
 set ruler           " Show the line numbers
@@ -74,7 +74,6 @@ let g:UltiSnipsExpandTrigger="<c-j>"
 
 " Shougo/deoplete.nvim
 let g:deoplete#enable_at_startup = 1 " Start
-
 
 " vim-puppet configuration
 let g:puppet_80chars='false'
