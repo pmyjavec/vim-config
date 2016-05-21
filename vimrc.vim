@@ -3,9 +3,11 @@
 "=============================================================================
 scriptencoding utf-8
 
-syntax on " syntax highlighting for files
+syntax on                 " syntax highlighting for files
+set wildmode=list:longest " Wildcard /command matches, order by longest first
+set showcmd               " Show current pending command in the prompt
 
-if !has('nvim')
+if !has('nvim') " Defaults which nvim already has
     set autoindent                                " Use spaces not tabs by default
     set encoding=utf-8                            " Display specal and foreign charecters
     set autoread                                  " Reload file after begin written to outside of vim
@@ -26,8 +28,6 @@ set shiftwidth=4  " Amount of spaces when re-indenting
 " Search  settings
 set ignorecase " Ignore casing of searches
 set smartcase  " Be smart about case sensitivity when searching
-
-set wildmode=list:longest     " Wildcard matches, order by longest first
 
 "=============================================================================
 " Auto Commands
