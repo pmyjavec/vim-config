@@ -42,7 +42,7 @@ let mapleader=';' " Easy access to leader key
 
 let g:EasyMotion_leader_key='<Leader><Leader>'
 
-map <Leader>t :CommandT<CR>
+map <Leader>t :FZF <CR>
 map <Leader>n :NERDTreeToggle<CR>
 map <Leader>m :NERDTreeFocus<CR>
 map <Leader>u :IndentGuidesToggle<CR>
