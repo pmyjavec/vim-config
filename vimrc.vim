@@ -75,10 +75,10 @@ let g:airline_powerline_fonts = 1
 "=============================================================================
 
 set t_Co=256               " Use 256 colors
-set background=dark        " Set dark backgrounds by default
+set background=light
 set visualbell             " Flash screen on notifications
 set scrolloff=999          " Centered cursor
 set ruler                  " Show the line numbers
 set relativenumber         " Line numbers relative to the cursor
 set cursorline             " Highlight line the cursor is on
-colorscheme base16-monokai
+colorscheme                base16-harmonic16
