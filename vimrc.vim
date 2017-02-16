@@ -1,4 +1,4 @@
-"=============================================================================
+":=============================================================================
 " Misc options
 "=============================================================================
 scriptencoding utf-8
@@ -50,6 +50,7 @@ map <Leader>w :write<CR>
 map <Leader>q :wq<CR>
 map <Leader>! :qall<CR>
 map <Leader>b :TagbarToggle<CR>
+map <Leader>a :Ack<Space>
 
 "=============================================================================
 " Plugin Settings
@@ -70,15 +71,19 @@ let base16colorspace=256
 " airline
 let g:airline_powerline_fonts = 1
 
+" Ack
+let g:ack_autoclose = 1
+let g:ackhighlight = 1
+
 "=============================================================================
 " Display & theme settings
 "=============================================================================
 
 set t_Co=256               " Use 256 colors
-set background=light
+set background=dark
 set visualbell             " Flash screen on notifications
 set scrolloff=999          " Centered cursor
 set ruler                  " Show the line numbers
 set relativenumber         " Line numbers relative to the cursor
 set cursorline             " Highlight line the cursor is on
-colorscheme                base16-harmonic16
+colorscheme                base16-monokai
