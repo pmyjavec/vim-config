@@ -37,6 +37,18 @@ autocmd BufWritePre * :%s/\s\+$//e  "Remove trailing whitespaces
 "=============================================================================
 " Key Bindings
 "=============================================================================
+"
+" Buffer management
+nnoremap <silent> [b  :bprevious<CR>
+nnoremap <silent> b]  :bnext<CR>
+nnoremap <silent> [B  :bfirst<CR>
+nnoremap <silent> B]  :blast<CR>
+
+" Tab management
+nnoremap <silent> [t  :tprevious<CR>
+nnoremap <silent> t]  :tnext<CR>
+nnoremap <silent> [T  :tfirst<CR>
+nnoremap <silent> T]  :tlast<CR>
 
 let mapleader=';' " Easy access to leader key
 
@@ -60,7 +72,7 @@ map <Leader>a :Ack<Space>
  let NERDTreeIgnore=['\.pyc$', '\.gem$', '\.out', '\~$', '_site', '\.beam$']
 
 " UltiSnips Configuration
-let g:UltiSnipsExpandTrigger="<c-j>"
+let g:UltiSnipsExpandTrigger="<tab>"
 
 " Shougo/deoplete.nvim
 let g:deoplete#enable_at_startup = 1 " Start
