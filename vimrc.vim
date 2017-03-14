@@ -19,6 +19,9 @@ if !has('nvim') " Defaults which nvim already has
     set listchars=tab:>.,trail:.,extends:#,nbsp:. " Show traiing whitepace etc
 endif
 
+" Disable Mouse Support
+set mouse=
+
 " Tab settings
 set expandtab     " Insert the right number of spaces
 set tabstop=4     " Display n spaces for each tab
@@ -45,10 +48,10 @@ nnoremap <silent> [B  :bfirst<CR>
 nnoremap <silent> B]  :blast<CR>
 
 " Tab management
-nnoremap <silent> [t  :tprevious<CR>
-nnoremap <silent> t]  :tnext<CR>
-nnoremap <silent> [T  :tfirst<CR>
-nnoremap <silent> T]  :tlast<CR>
+nnoremap <silent> [t  :tabprevious<CR>
+nnoremap <silent> t]  :tabnext<CR>
+nnoremap <silent> [T  :tabfirst<CR>
+nnoremap <silent> T]  :tablast<CR>
 
 let mapleader=';' " Easy access to leader key
 
@@ -64,6 +67,14 @@ map <Leader>! :qall<CR>
 map <Leader>b :TagbarToggle<CR>
 map <Leader>a :Ack<Space>
 
+ " ViMux
+map <Leader>vp :VimuxPromptCommand<CR>
+map <Leader>vl :VimuxRunLastCommand<CR>
+map <Leader>vi :VimuxInspectRunner<CR>
+map <Leader>vq :VimuxCloseRunner<CR>
+map <Leader>vx :VimuxInterruptRunner<CR>
+map <Leader>vz :call VimuxZoomRunner()<CR>
+
 "=============================================================================
 " Plugin Settings
 "=============================================================================
@@ -72,7 +83,7 @@ map <Leader>a :Ack<Space>
  let NERDTreeIgnore=['\.pyc$', '\.gem$', '\.out', '\~$', '_site', '\.beam$']
 
 " UltiSnips Configuration
-let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsExpandTrigger="<C-j>"
 
 " Shougo/deoplete.nvim
 let g:deoplete#enable_at_startup = 1 " Start
