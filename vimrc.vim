@@ -41,19 +41,20 @@ autocmd BufWritePre * :%s/\s\+$//e  "Remove trailing whitespaces
 " Key Bindings
 "=============================================================================
 "
+let mapleader=';' " Easy access to leader key
+
 " Buffer management
 nnoremap <silent> [b  :bprevious<CR>
 nnoremap <silent> b]  :bnext<CR>
 nnoremap <silent> [B  :bfirst<CR>
 nnoremap <silent> B]  :blast<CR>
+map      <Leader>f    :ls<CR>
 
 " Tab management
 nnoremap <silent> [t  :tabprevious<CR>
 nnoremap <silent> t]  :tabnext<CR>
 nnoremap <silent> [T  :tabfirst<CR>
 nnoremap <silent> T]  :tablast<CR>
-
-let mapleader=';' " Easy access to leader key
 
 let g:EasyMotion_leader_key='<Leader><Leader>'
 
@@ -66,6 +67,7 @@ map <Leader>q :wq<CR>
 map <Leader>! :qall<CR>
 map <Leader>b :TagbarToggle<CR>
 map <Leader>a :Ack<Space>
+map <leader>h :noh<CR>
 
  " ViMux
 map <Leader>vp :VimuxPromptCommand<CR>
