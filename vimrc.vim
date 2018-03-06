@@ -27,6 +27,7 @@ set expandtab     " Insert the right number of spaces
 set tabstop=4     " Display n spaces for each tab
 set softtabstop=4 " Display n spaces for each softtab
 set shiftwidth=4  " Amount of spaces when re-indenting
+set colorcolumn=80 " Highlight long lines
 
 " Search  settings
 set ignorecase " Ignore casing of searches
@@ -48,7 +49,7 @@ nnoremap <silent> [b  :bprevious<CR>
 nnoremap <silent> b]  :bnext<CR>
 nnoremap <silent> [B  :bfirst<CR>
 nnoremap <silent> B]  :blast<CR>
-map      <Leader>f    :ls<CR>
+map      <Leader>ls    :ls<CR>
 
 " Tab management
 nnoremap <silent> [t  :tabprevious<CR>
@@ -56,13 +57,21 @@ nnoremap <silent> t]  :tabnext<CR>
 nnoremap <silent> [T  :tabfirst<CR>
 nnoremap <silent> T]  :tablast<CR>
 
-let g:EasyMotion_leader_key='<Leader><Leader>'
+" Easy Motion
+let g:EasyMotion_do_mapping = 0
+let g:EasyMotion_smartcase = 1
+nmap <SPACE> <Plug>(easymotion-s)
+nmap <leader>j <Plug>(easymotion-bd-jk)
+nmap <leader>k <Plug>(easymotion-bd-jk)
+nmap <leader>w <Plug>(easymotion-bd-w)
+nmap <leader><leader>j <Plug>(easymotion-overwin-line)
+nmap <leader><leader>k <Plug>(easymotion-overwin-line)
 
 map <Leader>t :FZF <CR>
 map <Leader>n :NERDTreeToggle<CR>
 map <Leader>m :NERDTreeFocus<CR>
 map <Leader>u :IndentGuidesToggle<CR>
-map <Leader>w :write<CR>
+map <Leader>ww :write<CR>
 map <Leader>q :wq<CR>
 map <Leader>! :qall<CR>
 map <Leader>b :TagbarToggle<CR>
