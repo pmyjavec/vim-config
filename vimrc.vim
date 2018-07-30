@@ -109,6 +109,9 @@ let g:airline_powerline_fonts = 1
 let g:ack_autoclose = 1
 let g:ackhighlight = 1
 
+" vim-terraform
+let g:terraform_fmt_on_save = 1
+
 "=============================================================================
 " Display & theme settings
 "=============================================================================
