@@ -23,11 +23,11 @@ endif
 set mouse=
 
 " Tab settings
-set expandtab     " Insert the right number of spaces
-set tabstop=4     " Display n spaces for each tab
-set softtabstop=4 " Display n spaces for each softtab
-set shiftwidth=4  " Amount of spaces when re-indenting
-set colorcolumn=80 " Highlight long lines
+set expandtab       " Insert the right number of spaces
+set tabstop=4       " Display n spaces for each tab
+set softtabstop=4   " Display n spaces for each softtab
+set shiftwidth=4    " Amount of spaces when re-indenting
+set colorcolumn=80  " Highlight long lines
 
 " Search  settings
 set ignorecase " Ignore casing of searches
@@ -111,6 +111,9 @@ let g:ackhighlight = 1
 
 " vim-terraform
 let g:terraform_fmt_on_save = 1
+
+" vim-markdown
+let g:vim_markdown_folding_disabled = 1
 
 "=============================================================================
 " Display & theme settings
