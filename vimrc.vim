@@ -71,11 +71,11 @@ map <Leader>t :FZF <CR>
 map <Leader>n :NERDTreeToggle<CR>
 map <Leader>m :NERDTreeFocus<CR>
 map <Leader>u :IndentGuidesToggle<CR>
-map <Leader>ww :write<CR>
+map <Leader>s :write<CR>
 map <Leader>q :wq<CR>
 map <Leader>! :qall<CR>
 map <Leader>b :TagbarToggle<CR>
-map <Leader>a :Ack<Space>
+map <Leader>a :Ag!<CR>
 map <leader>h :noh<CR>
 
  " ViMux
@@ -86,12 +86,22 @@ map <Leader>vq :VimuxCloseRunner<CR>
 map <Leader>vx :VimuxInterruptRunner<CR>
 map <Leader>vz :call VimuxZoomRunner()<CR>
 
+" Moving between splits easier
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
+" Fugitive
+map <Leader>gw :Gwrite<CR>
+
+" Fugitive
+map <Leader>f :Black<CR>
+
 "=============================================================================
 " Plugin Settings
 "=============================================================================
 
 " NERDTree
- let NERDTreeIgnore=['\.pyc$', '\.gem$', '\.out', '\~$', '_site', '\.beam$']
+ let NERDTreeIgnore=['\.pyc$', '\.gem$', '\.out', '\~$', '_site', '\.beam$', '__pycache__']
 
 " UltiSnips Configuration
 let g:UltiSnipsExpandTrigger="<C-j>"
@@ -105,15 +115,17 @@ let base16colorspace=256
 " airline
 let g:airline_powerline_fonts = 1
 
-" Ack
-let g:ack_autoclose = 1
-let g:ackhighlight = 1
+" FZF + Silver Searcher
+command! -bang -nargs=* Ag call fzf#vim#ag(<q-args>, {'options': '--delimiter : --nth 4..'}, <bang>0)
 
 " vim-terraform
 let g:terraform_fmt_on_save = 1
 
 " vim-markdown
 let g:vim_markdown_folding_disabled = 1
+
+" Syntastic
+let g:syntastic_python_checkers = ['pylint']
 
 "=============================================================================
 " Display & theme settings
