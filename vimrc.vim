@@ -2,7 +2,6 @@
 " Misc options
 "=============================================================================
 scriptencoding utf-8
-
 syntax on                 " syntax highlighting for files
 set wildmode=list:longest " Wildcard /command matches, order by longest first
 set showcmd               " Show current pending command in the prompt
@@ -96,6 +95,13 @@ map <Leader>gw :Gwrite<CR>
 " Fugitive
 map <Leader>f :Black<CR>
 
+" vim-test
+nmap <silent> t<C-n> :TestNearest<CR>
+nmap <silent> t<C-f> :TestFile<CR>
+nmap <silent> t<C-s> :TestSuite<CR>
+nmap <silent> t<C-l> :TestLast<CR>
+nmap <silent> t<C-g> :TestVisit<CR>
+
 "=============================================================================
 " Plugin Settings
 "=============================================================================
@@ -110,7 +116,10 @@ let g:UltiSnipsExpandTrigger="<C-j>"
 let g:deoplete#enable_at_startup = 1 " Start
 
 " base16 themes
-let base16colorspace=256
+set termguicolors
+colorscheme NeoSolarized
+let g:neosolarized_contrast = "normal"
+set background=dark
 
 " airline
 let g:airline_powerline_fonts = 1
@@ -127,15 +136,22 @@ let g:vim_markdown_folding_disabled = 1
 " Syntastic
 let g:syntastic_python_checkers = ['pylint']
 
+" Vim Gutter
+let signcolumn="yes:3"
+let g:gitgutter_override_sign_column_highlight = 0
+highlight LineNr guibg=none
+set updatetime=400
+
+"Misc
+set smartcase
+
 "=============================================================================
 " Display & theme settings
 "=============================================================================
 
-set t_Co=256               " Use 256 colors
-set background=dark
+"set t_Co=256               " Use 256 colors
 set visualbell             " Flash screen on notifications
 set scrolloff=999          " Centered cursor
 set ruler                  " Show the line numbers
-set relativenumber         " Line numbers relative to the cursor
+set number                 " Set line numbers on
 set cursorline             " Highlight line the cursor is on
-colorscheme                base16-monokai
